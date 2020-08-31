@@ -8,3 +8,16 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
 
+my_list = [7, 5, 3, 3, 2]
+
+while True:
+    try:
+        user_number = int(input('Введите число: '))
+        break
+    except ValueError:
+        print('Это не число! Попробуйте еще раз!')
+
+my_list.append(user_number)
+my_list.sort(reverse=True)
+
+print(my_list)

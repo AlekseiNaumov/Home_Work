@@ -2,3 +2,10 @@
 # Вывести каждое слово с новой строки. Строки необходимо пронумеровать.
 # Если в слово длинное, выводить только первые 10 букв в слове.
 
+user_str = input('Введите строку из нескольких слов, разделённых пробелами; ')
+
+user_list = user_str.split()
+
+for number, word in enumerate(user_list, 1):
+    word = word[:11] if len(word) > 10 else word
+    print(number, word)
